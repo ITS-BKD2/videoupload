@@ -1,0 +1,23 @@
+name: Build and upload binary artifact
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Build, package and upload .jar artifact
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '21'
+      - name: Build and package project
+        run: ./mvnw -f pom.xml clean package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: ./target/*.jar

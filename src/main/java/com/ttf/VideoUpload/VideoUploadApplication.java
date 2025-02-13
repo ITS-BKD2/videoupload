@@ -1,13 +1,13 @@
-package com.ttf.videoupload;
+package com.ttf.VideoUpload;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VideouploadApplication {
+public class VideoUploadApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VideouploadApplication.class, args);
+		SpringApplication.run(VideoUploadApplication.class, args);
 	}
 
 }

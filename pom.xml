@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ttf</groupId>
-	<artifactId>videoupload</artifactId>
+	<artifactId>VideoUpload</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>videoupload</name>
+	<name>VideoUpload</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

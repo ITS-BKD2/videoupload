@@ -16,7 +16,7 @@ services:
     container_name: user-service
 
   video-upload:
-    image: ghcr.io/its-bkd2/videoupload:v0.0.1
+    image: ghcr.io/its-bkd2/VideoUpload:v0.0.1
     ports:
       - "8083:8080"
     container_name: video-upload

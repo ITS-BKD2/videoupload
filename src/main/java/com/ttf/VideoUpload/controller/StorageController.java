@@ -1,4 +1,4 @@
-package com.ttf.videoupload.controller;
+package com.ttf.VideoUpload.controller;
 
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;

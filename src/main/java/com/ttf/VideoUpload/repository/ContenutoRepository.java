@@ -1,6 +1,6 @@
-package com.ttf.videoupload.repository;
+package com.ttf.VideoUpload.repository;
 
-import com.ttf.videoupload.model.Contenuto;
+import com.ttf.VideoUpload.model.Contenuto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

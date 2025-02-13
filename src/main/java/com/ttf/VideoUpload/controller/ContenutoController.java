@@ -1,7 +1,7 @@
-package com.ttf.videoupload.controller;
+package com.ttf.VideoUpload.controller;
 
-import com.ttf.videoupload.model.Contenuto;
-import com.ttf.videoupload.service.ContenutoService;
+import com.ttf.VideoUpload.model.Contenuto;
+import com.ttf.VideoUpload.service.ContenutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

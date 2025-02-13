@@ -1,4 +1,5 @@
-Sending build context to Docker daemon  51.96MB
+Sending build context to Docker daemon  51.96MB
+
 Step 1/5 : FROM openjdk:8-jdk-alpine
  ---> a3562aa0b991
 Step 2/5 : ARG JAR_FILE=target/*.jar
@@ -13,5 +14,5 @@ Step 4/5 : EXPOSE 8080
 Step 5/5 : ENTRYPOINT ["java","-jar","/app.jar"]
  ---> Using cache
  ---> a1bf62b9061f
-Successfully built a1bf62b9061f
+Successfully built aVideoUpload
 Successfully tagged videoupload:latest

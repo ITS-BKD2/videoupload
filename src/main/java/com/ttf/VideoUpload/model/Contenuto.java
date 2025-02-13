@@ -1,4 +1,4 @@
-package com.ttf.videoupload.model;
+package com.ttf.VideoUpload.model;
 
 import jakarta.persistence.*;
 import org.springframework.web.multipart.MultipartFile;

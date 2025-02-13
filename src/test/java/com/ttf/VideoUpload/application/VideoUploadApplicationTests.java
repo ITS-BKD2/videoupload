@@ -1,10 +1,9 @@
-package com.ttf.VideoUpload;
+package com.ttf.VideoUpload.application;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootTest
+@SpringBootTest(classes = VideoUploadApplication.class)
 class VideoUploadApplicationTests {
 
     @Test

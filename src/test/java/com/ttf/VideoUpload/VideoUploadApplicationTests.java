@@ -1,10 +1,10 @@
-package com.ttf.VideoUpload;
+package com.ttf.videoupload;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class VideoUploadApplicationTests {
+class VideouploadApplicationTests {
 
 	@Test
 	void contextLoads() {

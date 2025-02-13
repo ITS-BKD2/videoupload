@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista Contenuti</title>
+</head>
+<body>
+    <h2>Lista Contenuti</h2>
+    <a href="/contenuti/new">Aggiungi nuovo contenuto</a>
+    <ul>
+        <li th:each="contenuto : ${contenuti}">
+            <strong th:text="${contenuto.nome}"></strong> - 
+            <span th:text="${contenuto.descrizione}"></span> <br/>
+            
+            <video width="320" height="240" controls>
+                <source th:src="@{'/storage/' + ${contenuto.video}}" type="video/mp4">
+                Il tuo browser non supporta i video.
+            </video>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Aggiungi Contenuto</title>
+</head>
+<body>
+    <h2>Aggiungi un nuovo contenuto</h2>
+    <form action="/contenuti/save" method="post" enctype="multipart/form-data">
+        <label>Nome:</label>
+        <input type="text" name="nome" required/><br/>
+
+        <label>Descrizione:</label>
+        <input type="text" name="descrizione" required/><br/>
+
+        <label>Carica Video:</label>
+        <input type="file" name="videoFile" accept="video/*" required/><br/>
+
+        <button type="submit">Salva</button>
+    </form>
+</body>
+</html>

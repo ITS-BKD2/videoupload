@@ -1,4 +1,4 @@
-package com.ttf.VideoUpload;
+package com.ttf.VideoUpload.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

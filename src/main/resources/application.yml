@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: VideoUpload
+server:
+  port: 8083
+
+
+eureka:
+  client:
+    enabled: true

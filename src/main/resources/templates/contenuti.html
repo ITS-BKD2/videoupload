@@ -6,16 +6,32 @@
 <body>
     <h2>Lista Contenuti</h2>
     <a href="/contenuti/new">Aggiungi nuovo contenuto</a>
-    <ul>
-        <li th:each="contenuto : ${contenuti}">
-            <strong th:text="${contenuto.nome}"></strong> - 
-            <span th:text="${contenuto.descrizione}"></span> <br/>
-            
-            <video width="320" height="240" controls>
-                <source th:src="@{'/storage/' + ${contenuto.video}}" type="video/mp4">
-                Il tuo browser non supporta i video.
-            </video>
-        </li>
-    </ul>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Descrizione</th>
+            <th>Video</th>
+            <th>Azioni</th>
+        </tr>
+        <tr th:each="contenuto : ${contenuti}">
+            <td th:text="${contenuto.nome}"></td>
+            <td th:text="${contenuto.descrizione}"></td>
+            <td>
+                <video width="200" controls>
+                    <source th:src="@{/storage/{video}(video=${contenuto.video})}" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>
+            </td>
+            <td>
+                <form th:action="@{/delete/{id}(id=${contenuto.id})}" method="post">
+                    <input type="hidden" name="_method" value="delete" />
+                    <button type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo video?');">
+                        ❌ Elimina
+                    </button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    
 </body>
 </html>

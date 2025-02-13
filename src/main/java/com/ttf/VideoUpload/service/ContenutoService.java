@@ -2,21 +2,32 @@ package com.ttf.VideoUpload.service;
 
 import com.ttf.VideoUpload.model.Contenuto;
 import com.ttf.VideoUpload.repository.ContenutoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ContenutoService {
 
-    @Autowired
-    private ContenutoRepository repository;
+    private final ContenutoRepository contenutoRepository;
 
-    public List<Contenuto> getAllContenuti() {
-        return repository.findAll();
+    public ContenutoService(ContenutoRepository contenutoRepository) {
+        this.contenutoRepository = contenutoRepository;
     }
 
-    public void saveContenuto(Contenuto contenuto) {
-        repository.save(contenuto);
+    public List<Contenuto> getAllContenuti() {
+        return contenutoRepository.findAll();
+    }
+
+    public Optional<Contenuto> getContenutoById(Long id) {
+        return contenutoRepository.findById(id);
+    }
+
+    public Contenuto saveContenuto(Contenuto contenuto) {
+        return contenutoRepository.save(contenuto);
+    }
+
+    public void deleteContenuto(Long id) {
+        contenutoRepository.deleteById(id);
     }
 }

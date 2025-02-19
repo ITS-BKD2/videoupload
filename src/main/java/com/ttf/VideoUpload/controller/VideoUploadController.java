@@ -60,9 +60,6 @@ public class VideoUploadController {
         return restTemplate.getForObject("/helloworld", String.class);
 
     }
-
-
-
     @GetMapping("/getAll")
     public List<String> getAllServices() {
         RestTemplate restTemplate = new RestTemplate();

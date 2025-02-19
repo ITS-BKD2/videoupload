@@ -2,45 +2,55 @@ version: '3.8'
 
 services:
   comment:
-    image: ghcr.io/its-bkd2/comment-service:0.0.2
+    image: ghcr.io/its-bkd2/comment-service:0.0.4
     ports:
       - "8081:8080"
     container_name: comment-service
     depends_on:
       - user
+    env_file:
+      - .env
 
   user:
-    image: ghcr.io/its-bkd2/user-service:0.0.2
+    image: ghcr.io/its-bkd2/user-service:0.0.4
     ports:
       - "8082:8080"
     container_name: user-service
+    env_file:
+      - .env
 
   video-upload:
-    image: ghcr.io/its-bkd2/videoupload:v0.0.2
+    image: ghcr.io/its-bkd2/videoupload:0.0.4
     ports:
       - "8083:8080"
     container_name: video-upload
     depends_on:
       - user
+    env_file:
+      - .env
 
   video-encoding:
-    image: ghcr.io/its-bkd2/video-transcoding:0.0.2
+    image: ghcr.io/its-bkd2/video-transcoding:0.0.4
     ports:
       - "8084:8080"
-    container_name: video-encoding
+    container_name: video-transcoding
     volumes:
       # Mounts the project folder into the container
       - ".:/workspace"
     working_dir: "/workspace"
+    env_file:
+      - .env
 
   video-streaming:
-    image: ghcr.io/its-bkd2/streaming:0.0.2
+    image: ghcr.io/its-bkd2/streaming:0.0.4
     ports:
       - "8085:8080"
     container_name: video-streaming
-
+    env_file:
+      - .env
+      
   eureka:
-    image: ghcr.io/its-bkd2/eureka:0.0.1
+    image: ghcr.io/its-bkd2/eurekaserver:0.0.1
     ports:
       - "8761:8761"
-    container_name: eureka
+    container_name: eurekaserver

@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.ttf</groupId>
     <artifactId>VideoUpload</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>VideoUpload</name>
     <description>Video uploading management service</description>
     <url/>

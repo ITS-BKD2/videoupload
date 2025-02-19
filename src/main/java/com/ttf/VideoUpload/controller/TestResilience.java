@@ -19,7 +19,7 @@ public class TestResilience {
     private final RestTemplate restTemplate;
 
 
-    public TestResilience(RestTemplate restTemplate, EurekaDiscoveryClient discoveryClient) {
+    public TestResilience(RestTemplate restTemplate, DiscoveryClient discoveryClient) {
         this.restTemplate = restTemplate;
         this.discoveryClient = discoveryClient;
     }

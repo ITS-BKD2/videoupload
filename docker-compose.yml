@@ -16,7 +16,7 @@ services:
     container_name: user-service
 
   video-upload:
-    image: ghcr.io/its-bkd2/videoupload:v0.0.2
+    image: ghcr.io/its-bkd2/videoupload:0.0.2
     ports:
       - "8083:8080"
     container_name: video-upload
@@ -24,10 +24,10 @@ services:
       - user
 
   video-encoding:
-    image: ghcr.io/its-bkd2/video-transcoding:0.0.2
+    image: ghcr.io/its-bkd2/video-transcoding:0.0.3
     ports:
       - "8084:8080"
-    container_name: video-encoding
+    container_name: video-transcoding
     volumes:
       # Mounts the project folder into the container
       - ".:/workspace"
@@ -38,9 +38,8 @@ services:
     ports:
       - "8085:8080"
     container_name: video-streaming
-
   eureka:
-    image: ghcr.io/its-bkd2/eureka:0.0.1
+    image: ghcr.io/its-bkd2/eurekaserver:0.0.1
     ports:
       - "8761:8761"
-    container_name: eureka
+    container_name: eurekaserver

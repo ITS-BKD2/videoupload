@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
-@RequestMapping
+@RequestMapping("/test")
 @RestController
 public class TestResilience {
 

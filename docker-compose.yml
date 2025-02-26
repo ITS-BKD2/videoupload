@@ -4,7 +4,7 @@ services:
   comment:
     image: ghcr.io/its-bkd2/comment-service:0.0.5
     ports:
-      - "8081:8080"
+      - "8081:8081"
     container_name: comment-service
     depends_on:
       - eureka
@@ -14,7 +14,7 @@ services:
   user:
     image: ghcr.io/its-bkd2/user-service:0.0.5
     ports:
-      - "8082:8080"
+      - "8082:8082"
     container_name: user-service
     depends_on:
       - eureka
@@ -24,7 +24,7 @@ services:
   video-upload:
     image: ghcr.io/its-bkd2/videoupload:0.0.5
     ports:
-      - "8083:8080"
+      - "8083:8083"
     container_name: video-upload
     depends_on:
       - eureka
@@ -34,7 +34,7 @@ services:
   video-encoding:
     image: ghcr.io/its-bkd2/video-transcoding:0.0.5
     ports:
-      - "8084:8080"
+      - "8084:8084"
     container_name: video-transcoding
     volumes:
       # Mounts the project folder into the container
@@ -48,7 +48,7 @@ services:
   video-streaming:
     image: ghcr.io/its-bkd2/streaming:0.0.5
     ports:
-      - "8085:8080"
+      - "8085:8085"
     container_name: video-streaming
     depends_on:
       - eureka
